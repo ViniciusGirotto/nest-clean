@@ -2,6 +2,7 @@ import {z} from "zod"
 
 export const envScema = z.object({
     DATABASE_URL: z.string().url(),
+    JWT_SECRET: z.string(),
     PORT: z.coerce.number().optional().default(3333),
 })
 
